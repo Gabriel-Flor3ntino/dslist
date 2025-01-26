@@ -13,12 +13,14 @@ import com.gabrielflorentino.dslist.services.GameService;
 @RestController
 @RequestMapping(value = "/games")
 public class GameController {
+	
+	
 	@Autowired
 	private GameService gameService;	
 	
 	@GetMapping
 	public List<GameMinDTO> findAll() {
-		List<GameMinDTO> result = gameService.findAll();
-		return result;
+			List<GameMinDTO> result = gameService.findAll();
+			return result;
 	}
 }
